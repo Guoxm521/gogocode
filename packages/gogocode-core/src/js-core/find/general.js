@@ -30,7 +30,7 @@ function checkIsMatch(full, partial, extraData, strictSequence) {
                 if (hasOwn(full, prop)) {
                     res = partial[prop].every((p) => {
                         let a = false;
-                        if (!full[prop].length && partial[prop].length == 1 && has$$$) {
+                        if (full[prop] && !full[prop].length && partial[prop].length == 1 && has$$$) {
                             return true
                         }
                         full[prop] &&
